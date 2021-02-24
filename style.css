@@ -1,0 +1,75 @@
+/* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
+
+html {
+  box-sizing: border-box;
+}
+
+body{
+  /* removes default margin  */
+  margin: 0;
+  background: #45BADD;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* URL GIF IMAGE */
+  background: url('./robot.gif');
+  /* Size of image - Contain changes resolution so pic fits container  */
+  background-size: contain; 
+
+  /* Sets image pos - LEFT is Hor axis and CENTER is VERT axis */
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+button{
+  /* changes Mouse pointer to finger pointer */
+  cursor: pointer;
+  outline: none;
+  width: 250px;
+  height: 45px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: white;
+  background-color: #ff3482;
+  border: 0;
+  border-radius: 6px;
+  box-shadow: 5px 5px 20px 10px ;
+  margin-bottom: 15px;
+}
+
+button:hover{
+  color:#45BADD;
+  box-shadow: 5px 5px 20px 10px #ff3482;
+ 
+
+}
+
+button:active{
+  /* makes the button 2%^ smaller on all sides. */
+  transform: scale(0.98);
+  box-shadow: none;
+  
+}
+
+button:disabled{
+  cursor: not-allowed;
+  transform: scale(0.25);
+  background-color: black;
+  color: black;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1000px){
+
+  .container{
+    background-position: top top;
+    background-size: cover;
+  }
+
+}
